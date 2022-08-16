@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>Lucke's Adventure</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/icon.png" rel="shortcut icon" />
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="container">
+			<!-- logo -->
+			<a class="site-logo" href="index.php">
+				<img src="img/logo.png" alt="">
+			</a>
+			<div class="user-panel">
+				<a href="login.html">Login</a> / <a href="registrar.html">Registrar</a>
+			</div>
+			<!-- responsive -->
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+			<!-- site menu -->
+			<nav class="main-menu">
+				<ul>
+					<li><a href="index.php">Início</a></li>
+					<li><a href="jogo.php">Jogo</a></li>
+					<li><a href="forum.php">Fórum</a></li>
+					<li><a href="contato.php">Contato</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+	<!--área de login-->
+	<section class="page-section spad contact-page">
+		<div class="container">
+			<div class="col-lg-8">
+				<div class="contact-form-warp">
+					<h2 class="comment-title">Digite suas credenciais</h2>
+					<form id="flogin" class="comment-form" action="php/login.php" method="post" onsubmit="enviar()">
+						<div class="row">
+							<div class="col-lg-12">
+								<p class="subtitulo-login">Digite seu nome de usuário ou e-mail</p>
+								<input type="text" name="fuser" id="fuser" placeholder="Nome de usuário ou e-mail">
+							</div>
+							<div class="col-lg-12">
+								<p class="subtitulo-login">Digite sua senha</p>
+								<input type="password" name="fpassword" id="fpassword" placeholder="Senha">
+								<!--a href="#">Esqueceu sua senha?</a-->
+							</div>
+							<div class="col-md-6">
+								<a href="#">Esqueceu sua senha?</a>
+								<br><br>
+							</div>
+							<div class="col-lg-12">
+								<button  onclick="return enviar()" type="submit" class="site-btn btn-sm">Entrar</button>
+								<a class="site-btn btn-sm-right" href="registrar.html">Criar
+									Conta</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--área de login end-->
+
+
+	<!-- Footer top section -->
+	<section class="footer-top-section">
+		<div class="container">
+			<div class="footer-top-bg">
+				<img src="img/footer-top-bg.png" alt="">
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="footer-logo text-white">
+						<img src="img/footer-logo.png" alt="">
+						<div class="social-links">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="img-footer">
+					<img src="img/logofooter.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer top section end -->
+
+
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			<ul class="footer-menu">
+				<li><a href="index.php">Início</a></li>
+				<li><a href="jogo.php">Jogo</a></li>
+				<li><a href="forum.php">Fórum</a></li>
+				<li><a href="contato.php">Contato</a></li>
+			</ul>
+			<p class="copyright">
+				Copyright &copy;
+				<script>document.write(new Date().getFullYear());</script>
+
+			</p>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.marquee.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		function enviar() {
+			var nome = $("#fuser").val();
+			var pass = $("#fpassword").val();
+			if (nome.length == 0) {
+				$('#fuser').attr("placeholder", "Preencha esse campo").addClass("alert alert-danger").focus();
+				return false;
+			}
+			if (pass.length == 0) {
+				$('#fpassword').attr("placeholder", "Preencha esse campo").addClass("alert alert-danger").focus();
+				return false;
+			}
+			$("#flogin").submit();
+		}
+	</script>
+</body>
+</html>
