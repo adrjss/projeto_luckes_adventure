@@ -1,1 +1,2 @@
-# Conceito de site para promover o jogo
+# Projeto integrador terceiro semestre
+Site para promover o jogo
