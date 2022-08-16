@@ -1,2 +1,1 @@
-# luckes_adventure_site
-Jogo 2D feito com Godot Engine
+# Conceito de site para promover o jogo
