@@ -1,2 +1,3 @@
 # Projeto integrador terceiro semestre
-Site para promover o jogo
+
+Jogo: https://github.com/adrjss/luckes_adventure_game
